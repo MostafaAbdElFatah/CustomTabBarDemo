@@ -44,10 +44,10 @@ class TabBarView: UIView {
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         centerView.backgroundColor = .white
-        if Locale.current.languageCode?.lowercased() == "ar"{
-            stackView.transform = CGAffineTransform(scaleX: -1, y: 1)
-            sview.transform = CGAffineTransform(scaleX: -1, y: 1)
-        }
+//        if Locale.current.languageCode?.lowercased() == "ar"{
+//            stackView.transform = CGAffineTransform(scaleX: -1, y: 1)
+//            sview.transform = CGAffineTransform(scaleX: -1, y: 1)
+//        }
     }
     
     override func layoutSubviews() {
@@ -137,7 +137,7 @@ class CustomView: UIView {
     func createPath() -> CGPath {
         let height: CGFloat = 60 //frame.height
         let path = UIBezierPath()
-        let centerWidth:CGFloat = height
+        let centerWidth:CGFloat = Locale.current.languageCode?.lowercased() == "ar" ? UIScreen.main.bounds.width - height:height
         path.move(to: CGPoint(x: height, y: 0))
         
         path.addLine(to: CGPoint(x: (centerWidth - height ), y: 0))
