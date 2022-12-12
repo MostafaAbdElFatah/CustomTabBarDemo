@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TabBarView" customModule="Awradi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="95"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wnp-MV-QA9">
+                    <rect key="frame" x="20" y="52.5" width="285" height="22.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qni-2D-GGa" customClass="CustomView" customModule="Awradi" customModuleProvider="target">
+                    <rect key="frame" x="10" y="20" width="305" height="65"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="0tH-5h-Syh">
+                            <rect key="frame" x="10" y="10" width="285" height="45"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BwC-wk-Lsd">
+                                    <rect key="frame" x="0.0" y="0.0" width="285" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" verticalHuggingPriority="246" verticalCompressionResistancePriority="754" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daq-Ek-1pN">
+                                            <rect key="frame" x="0.0" y="0.0" width="57" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="L8V-Yc-EYJ"/>
+                                            </constraints>
+                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="home"/>
+                                            <connections>
+                                                <action selector="tabBarBtnTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="mjw-vC-e2P"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vse-ap-Fkc">
+                                            <rect key="frame" x="57" y="0.0" width="57" height="40"/>
+                                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="tlwat"/>
+                                            <connections>
+                                                <action selector="tabBarBtnTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="bih-K5-MYn"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDQ-yj-Tx7">
+                                            <rect key="frame" x="114" y="0.0" width="57" height="40"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tn0-zj-Sio">
+                                            <rect key="frame" x="171" y="0.0" width="57" height="40"/>
+                                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="books"/>
+                                            <connections>
+                                                <action selector="tabBarBtnTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="cnc-Hb-sIa"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aed-Nj-Ymv">
+                                            <rect key="frame" x="228" y="0.0" width="57" height="40"/>
+                                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="settings"/>
+                                            <connections>
+                                                <action selector="tabBarBtnTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="rQb-sn-IiH"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7vL-i9-ExL">
+                                    <rect key="frame" x="0.0" y="40" width="285" height="5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الرئيسة" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWJ-ar-pjf">
+                                            <rect key="frame" x="0.0" y="0.0" width="57" height="5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التلاوات" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9v-a4-1zj">
+                                            <rect key="frame" x="57" y="0.0" width="57" height="5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المصحف" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYA-Pp-M5d">
+                                            <rect key="frame" x="114" y="0.0" width="57" height="5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الكتب" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnO-o5-QhK">
+                                            <rect key="frame" x="171" y="0.0" width="57" height="5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الإعدادت" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruO-wX-JYj">
+                                            <rect key="frame" x="228" y="0.0" width="57" height="5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="0tH-5h-Syh" secondAttribute="trailing" constant="10" id="4S1-Pi-ctM"/>
+                        <constraint firstItem="0tH-5h-Syh" firstAttribute="top" secondItem="Qni-2D-GGa" secondAttribute="top" constant="10" id="DH7-6N-ih9"/>
+                        <constraint firstAttribute="bottom" secondItem="0tH-5h-Syh" secondAttribute="bottom" constant="10" id="pNS-eF-10e"/>
+                        <constraint firstItem="0tH-5h-Syh" firstAttribute="leading" secondItem="Qni-2D-GGa" secondAttribute="leading" constant="10" id="xEi-6S-RMF"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0j3-Dy-5Ud">
+                    <rect key="frame" x="132.5" y="-7.5" width="60" height="60"/>
+                    <subviews>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wt5-eK-jCg">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="quran"/>
+                            <connections>
+                                <action selector="tabBarBtnTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="83S-e3-Oc2"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Wt5-eK-jCg" firstAttribute="top" secondItem="0j3-Dy-5Ud" secondAttribute="top" id="DSR-Ke-UMe"/>
+                        <constraint firstAttribute="width" secondItem="0j3-Dy-5Ud" secondAttribute="height" multiplier="1:1" id="dZK-Yg-cdO"/>
+                        <constraint firstAttribute="trailing" secondItem="Wt5-eK-jCg" secondAttribute="trailing" id="jhw-Lu-9UB"/>
+                        <constraint firstItem="Wt5-eK-jCg" firstAttribute="leading" secondItem="0j3-Dy-5Ud" secondAttribute="leading" id="qKh-V0-RLi"/>
+                        <constraint firstAttribute="width" constant="60" id="vdV-EW-X1Q">
+                            <variation key="heightClass=regular-widthClass=regular" constant="90"/>
+                        </constraint>
+                        <constraint firstAttribute="bottom" secondItem="Wt5-eK-jCg" secondAttribute="bottom" id="wSD-5W-XS7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="0j3-Dy-5Ud" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="13t-Sp-aQc"/>
+                <constraint firstItem="wnp-MV-QA9" firstAttribute="trailing" secondItem="0tH-5h-Syh" secondAttribute="trailing" id="1s4-up-QzR"/>
+                <constraint firstItem="Qni-2D-GGa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="3yd-9Z-Cql"/>
+                <constraint firstAttribute="bottom" secondItem="Qni-2D-GGa" secondAttribute="bottom" constant="10" id="7HY-1F-etq"/>
+                <constraint firstItem="wnp-MV-QA9" firstAttribute="leading" secondItem="0tH-5h-Syh" secondAttribute="leading" id="DGa-kl-KNv"/>
+                <constraint firstItem="wnp-MV-QA9" firstAttribute="top" secondItem="0j3-Dy-5Ud" secondAttribute="bottom" id="F33-rA-c9W"/>
+                <constraint firstItem="Qni-2D-GGa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Qad-OU-9JH"/>
+                <constraint firstAttribute="trailing" secondItem="Qni-2D-GGa" secondAttribute="trailing" constant="10" id="W8K-3N-71a"/>
+                <constraint firstItem="wnp-MV-QA9" firstAttribute="bottom" secondItem="0tH-5h-Syh" secondAttribute="bottom" id="lFq-3i-Pus"/>
+                <constraint firstItem="wnp-MV-QA9" firstAttribute="height" secondItem="0tH-5h-Syh" secondAttribute="height" multiplier="0.5" id="p0o-F9-B0g"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="centerView" destination="0j3-Dy-5Ud" id="qrc-ET-WgJ"/>
+                <outlet property="sview" destination="Qni-2D-GGa" id="DLx-2k-ggM"/>
+                <outletCollection property="tabBarBtns" destination="daq-Ek-1pN" collectionClass="NSMutableArray" id="Amb-Fg-ecQ"/>
+                <outletCollection property="tabBarBtns" destination="Vse-ap-Fkc" collectionClass="NSMutableArray" id="Fvp-f8-XlE"/>
+                <outletCollection property="tabBarBtns" destination="Tn0-zj-Sio" collectionClass="NSMutableArray" id="uSN-7p-H1q"/>
+                <outletCollection property="tabBarBtns" destination="aed-Nj-Ymv" collectionClass="NSMutableArray" id="MjP-HS-AU7"/>
+                <outletCollection property="tabBarBtns" destination="Wt5-eK-jCg" collectionClass="NSMutableArray" id="dA8-Cn-Y6f"/>
+                <outletCollection property="tabBarLabels" destination="JWJ-ar-pjf" collectionClass="NSMutableArray" id="YYe-t9-agJ"/>
+                <outletCollection property="tabBarLabels" destination="U9v-a4-1zj" collectionClass="NSMutableArray" id="9Od-SP-tTY"/>
+                <outletCollection property="tabBarLabels" destination="ZYA-Pp-M5d" collectionClass="NSMutableArray" id="zJm-Wx-jWl"/>
+                <outletCollection property="tabBarLabels" destination="tnO-o5-QhK" collectionClass="NSMutableArray" id="554-S6-qC5"/>
+                <outletCollection property="tabBarLabels" destination="ruO-wX-JYj" collectionClass="NSMutableArray" id="twH-OF-piU"/>
+            </connections>
+            <point key="canvasLocation" x="-87.681159420289859" y="-214.62053571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="books" width="14.5" height="18"/>
+        <image name="home" width="17.5" height="19"/>
+        <image name="quran" width="27.5" height="24.5"/>
+        <image name="settings" width="20" height="20"/>
+        <image name="tlwat" width="18" height="18.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
