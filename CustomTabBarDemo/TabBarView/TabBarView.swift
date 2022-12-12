@@ -44,6 +44,10 @@ class TabBarView: UIView {
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         centerView.backgroundColor = .white
+        if Locale.current.languageCode?.lowercased() == "ar"{
+            stackView.transform = CGAffineTransform(scaleX: -1, y: 1)
+            sview.transform = CGAffineTransform(scaleX: -1, y: 1)
+        }
     }
     
     override func layoutSubviews() {

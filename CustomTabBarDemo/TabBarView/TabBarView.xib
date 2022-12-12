@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -103,7 +104,6 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="0tH-5h-Syh" secondAttribute="trailing" constant="10" id="4S1-Pi-ctM"/>
                         <constraint firstItem="0tH-5h-Syh" firstAttribute="top" secondItem="Qni-2D-GGa" secondAttribute="top" constant="10" id="DH7-6N-ih9"/>
                         <constraint firstAttribute="bottom" secondItem="0tH-5h-Syh" secondAttribute="bottom" constant="10" placeholder="YES" id="pNS-eF-10e"/>
                     </constraints>
@@ -141,6 +141,7 @@
                 <constraint firstItem="0j3-Dy-5Ud" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IdS-wZ-HTF"/>
                 <constraint firstItem="Qni-2D-GGa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Qad-OU-9JH"/>
                 <constraint firstAttribute="trailing" secondItem="Qni-2D-GGa" secondAttribute="trailing" id="W8K-3N-71a"/>
+                <constraint firstAttribute="trailing" secondItem="0tH-5h-Syh" secondAttribute="trailing" constant="10" id="l4n-6z-VuB"/>
                 <constraint firstItem="0tH-5h-Syh" firstAttribute="leading" secondItem="0j3-Dy-5Ud" secondAttribute="leading" id="tAr-J4-Mrk"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
