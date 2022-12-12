@@ -30,7 +30,10 @@ class TabBarView: UIView {
     @IBOutlet var tabBarBtns: [UIButton]!
     @IBOutlet var tabBarLabels: [UILabel]!
     @IBOutlet weak var centerView: UIView!
-    
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+    var bottomConstraint: NSLayoutConstraint!
+
     public var selectedTab:TabBar = .main{
         didSet{ setupSelectedView( selectedTab) }
     }
@@ -51,6 +54,7 @@ class TabBarView: UIView {
         centerView.layer.shadowOffset = CGSize(width: 1, height: 1)
         centerView.layer.shadowOpacity = 0.4
         centerView.layer.cornerRadius = centerView.frame.width / 2
+        leadingConstraint.constant =  30
     }
     
     @IBAction func tabBarBtnTapped(_ sender: UIButton) {
@@ -127,55 +131,58 @@ class CustomView: UIView {
     }
     
     func createPath() -> CGPath {
-        let height: CGFloat = frame.height
+        let height: CGFloat = 60 //frame.height
         let path = UIBezierPath()
-        let centerWidth = self.frame.width / 2
-        path.move(to: CGPoint(x: 40, y: 0))
+        let centerWidth:CGFloat = height
+        path.move(to: CGPoint(x: height, y: 0))
         
         path.addLine(to: CGPoint(x: (centerWidth - height ), y: 0))
         path.addCurve(
-            to: CGPoint(x: centerWidth, y: height - ( height * 0.4)),
+            to: CGPoint(x: centerWidth, y: height - ( height * 0.25)),
             controlPoint1: CGPoint(x: (centerWidth - 30), y: 0),
-            controlPoint2: CGPoint(x: centerWidth - 35, y: height - ( height * 0.4))
+            controlPoint2: CGPoint(x: centerWidth - 35, y: height - ( height * 0.25))
         )
         
         path.addCurve(
             to: CGPoint(x: centerWidth +  height, y: 0),
-            controlPoint1: CGPoint(x: centerWidth + 35, y: height - ( height * 0.4)),
+            controlPoint1: CGPoint(x: centerWidth + 35, y: height - ( height * 0.25)),
             controlPoint2: CGPoint(x: (centerWidth + 30), y: 0)
         )
         
-        path.addLine(to: CGPoint(x: self.frame.width - 40, y: 0))
+        path.addLine(to: CGPoint(x: self.frame.width, y: 0))
+        path.addLine(to: CGPoint(x: self.frame.width, y: self.frame.height))
         
-        // making cornerRadius of topRight
-        path.addCurve(
-            to: CGPoint(x: self.frame.width, y:  self.frame.height / 2),
-            controlPoint1: CGPoint(x: self.frame.width, y: 0),
-            controlPoint2: CGPoint(x: self.frame.width, y:  self.frame.height / 2)
-        )
-        
-        // making cornerRadius of bottomRight
-        path.addCurve(
-            to: CGPoint(x: self.frame.width - 40 , y: self.frame.height) ,
-            controlPoint1: CGPoint(x: self.frame.width, y:  self.frame.height),
-            controlPoint2: CGPoint(x: self.frame.width - 40 , y: self.frame.height)
-        )
+//        // making cornerRadius of topRight
+//        path.addCurve(
+//            to: CGPoint(x: self.frame.width, y:  self.frame.height / 2),
+//            controlPoint1: CGPoint(x: self.frame.width, y: 0),
+//            controlPoint2: CGPoint(x: self.frame.width, y:  self.frame.height / 2)
+//        )
+//
+//        // making cornerRadius of bottomRight
+//        path.addCurve(
+//            to: CGPoint(x: self.frame.width - 40 , y: self.frame.height) ,
+//            controlPoint1: CGPoint(x: self.frame.width, y:  self.frame.height),
+//            controlPoint2: CGPoint(x: self.frame.width - 40 , y: self.frame.height)
+//        )
 
-        path.addLine(to: CGPoint(x: 40, y: self.frame.height))
+        path.addLine(to: CGPoint(x: 0, y: self.frame.height))
         
-        // making cornerRadius of bottomLeft
-        path.addCurve(
-            to: CGPoint(x: 0, y: self.frame.height / 2),
-            controlPoint1: CGPoint(x: 0, y: self.frame.height),
-            controlPoint2: CGPoint(x: 0, y: self.frame.height / 2)
-        )
-        
-        // making cornerRadius of topLeft
-        path.addCurve(
-            to: CGPoint(x: 40, y: 0),
-            controlPoint1: CGPoint(x: 0, y: 0),
-            controlPoint2: CGPoint(x: 40, y: 0)
-        )
+        path.addLine(to: CGPoint(x: 0, y: self.frame.height))
+        path.addLine(to: CGPoint(x: 0, y: 0))
+//        // making cornerRadius of bottomLeft
+//        path.addCurve(
+//            to: CGPoint(x: 0, y: self.frame.height / 2),
+//            controlPoint1: CGPoint(x: 0, y: self.frame.height),
+//            controlPoint2: CGPoint(x: 0, y: self.frame.height / 2)
+//        )
+//        
+//        // making cornerRadius of topLeft
+//        path.addCurve(
+//            to: CGPoint(x: 40, y: 0),
+//            controlPoint1: CGPoint(x: 0, y: 0),
+//            controlPoint2: CGPoint(x: 40, y: 0)
+//        )
         
         path.close()
         return path.cgPath

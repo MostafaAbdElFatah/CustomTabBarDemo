@@ -39,9 +39,10 @@ class TabBarController: UITabBarController {
         sview.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(sview)
         NSLayoutConstraint.activate([
-            sview.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
-            sview.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
-            sview.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -5)
+            sview.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            sview.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            sview.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            sview.stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
         ])
         view.bringSubviewToFront(sview)
         return sview
